@@ -4866,6 +4866,9 @@ Game.Launch=function()
 			bigCookie.insertAdjacentHTML('beforeend','<label id="bigCookieLabel" style="font-size:100px !important;" class="srOnly">'+loc("Big clickable cookie")+'</label>');
 			bigCookie.tabIndex=1;
 		}
+		bigCookie.addEventListener('contextmenu',(e)=>{
+			e.preventDefault();
+		});
 		Game.Click=0;
 		Game.lastClickedEl=0;
 		Game.clicksThisSession=0;
